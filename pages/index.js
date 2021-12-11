@@ -14,7 +14,7 @@ const keys = [
 	{ key: 7, text: 'pqrs' },
 	{ key: 8, text: 'tuv' },
 	{ key: 9, text: 'wxyz' },
-	{ key: 0, text: '-' },
+	{ key: 0, text: '' },
 ];
 
 export default function Home() {
@@ -37,8 +37,13 @@ export default function Home() {
 							</Number>
 						);
 					})}
+
 				</KeyPath>
 			</TextProvider>
+
+      <section className='absolute bottom-5 right-10 text-white text-xl'>
+        <p>Reset by pressing "0"</p>
+      </section>
 		</>
 	);
 }
