@@ -27,6 +27,7 @@ export default function Home() {
 			</Head>
 
 			<TextProvider>
+        
         <Predictions />
 				<KeyPath>
 					{keys.map(({ key, text }, idx) => {

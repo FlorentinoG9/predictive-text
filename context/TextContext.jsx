@@ -6,14 +6,22 @@ export default function TextProvider({ children }) {
 	const [text, setText] = useState([]);
 
 	const keyPressed = (key) => {
-		let txt = [...key];
+		let array1 = [...key];
+		let array2 = [...text];
 
-    console.log(text);
-		for (let i = 0; i < txt.length; i++) {
-			// setText([...text, Array(txt[i])]);
-      setText(prev => [...prev, Array(txt[i])])
+		if (!text.length) {
+			setText(array1);
+		} else {
+			let combination = array2.flatMap((d) => array1.map((v) => d + v));
+
+			console.log({ combination });
+
+			setText(combination);
 		}
 
+		console.log({ array1, array2 });
+
+		console.log(array1.flatMap((d) => array2.map((v) => d + v)));
 	};
 
 	return (
