@@ -41,7 +41,7 @@ export default function Home() {
 				</KeyPath>
 			</TextProvider>
 
-      <section className='absolute bottom-5 right-10 text-white text-xl'>
+      <section className='absolute bottom-5 right-5 text-white text-md'>
         <p>Reset by pressing "0"</p>
       </section>
 		</>
